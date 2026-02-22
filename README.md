@@ -1,22 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 SkillReimburse - Professional E-Learning Platform
 
-## Getting Started
+A modern, full-featured e-learning platform built with Next.js 14, designed for professionals seeking company reimbursement for their courses.
 
-First, run the development server:
+![SkillReimburse](https://img.shields.io/badge/Next.js-14-black) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![License](https://img.shields.io/badge/license-MIT-green)
+
+## ✨ Features
+
+### For Students
+- 🎯 Browse 500+ professional courses
+- 💳 Secure payment integration with Razorpay (UPI, Cards, Wallets)
+- 📄 Professional invoices for company reimbursement
+- ⏱️ 3-month course access period
+- 🎬 Video lessons with progress tracking
+- 📚 Theory content and downloadable resources
+- ⭐ Course reviews and ratings
+- 💡 Request custom courses
+
+### For Administrators
+- 📊 Complete admin dashboard
+- 📝 Course management with structured modules/lessons
+- 💰 Payment tracking and analytics
+- 📬 Course request management
+- 👥 User management
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Database**: PostgreSQL + Prisma ORM
+- **Authentication**: NextAuth.js
+- **Payment**: Razorpay
+- **PDF Generation**: jsPDF
+- **Deployment**: Vercel
+
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Set up environment variables (copy .env.example to .env)
+cp .env.example .env
+
+# Run Prisma migrations
+npx prisma generate
+npx prisma migrate dev
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Environment Variables
+
+```env
+DATABASE_URL="postgresql://user:password@localhost:5432/skillreimburse"
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="your-secret-here"
+RAZORPAY_KEY_ID="your_key_id"
+RAZORPAY_KEY_SECRET="your_key_secret"
+```
+
+## 📂 Project Structure
+
+```
+skillreimburse/
+├── app/              # Next.js App Router pages
+├── components/       # React components
+├── lib/             # Utilities & configurations
+├── prisma/          # Database schema
+├── types/           # TypeScript types
+└── public/          # Static assets
+```
+
+## 🎨 UI Highlights
+
+- ✨ Bright, modern gradient design
+- 📱 Fully responsive
+- 🎭 Smooth animations
+- ♿ Accessible (WCAG compliant)
+
+## 📊 Key Pages
+
+- **/** - Homepage with featured courses
+- **/courses** - Course catalog with filters
+- **/login & /register** - Authentication pages
+- **/dashboard** - User learning dashboard
+- **/request-course** - Course request form
+- **/admin** - Admin dashboard (coming soon)
+
+## 🔐 Security
+
+- 🔒 Bcrypt password hashing
+- 🛡️ CSRF protection
+- 🔑 JWT authentication
+- 💳 Razorpay signature verification
+
+## 🎯 Next Steps
+
+1. Set up PostgreSQL database
+2. Configure Razorpay account
+3. Create admin user
+4. Add sample courses
+5. Deploy to Vercel
+
+## 📝 Documentation
+
+For detailed documentation, see [PROJECT_PLAN.md](../PROJECT_PLAN.md)
+
+## 🤝 Contributing
+
+Contributions welcome! Please create an issue or PR.
+
+## 📄 License
+
+MIT License - see LICENSE file for details.
+
+## 💬 Support
+
+Email: support@skillreimburse.com
+
+---
+
+Built with ❤️ for professionals seeking continuous learning 🚀
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
