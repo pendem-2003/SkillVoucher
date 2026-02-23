@@ -383,11 +383,11 @@ model Invoice {
   courseDetails     Json      // Detailed course info with prices
   
   // Company Details (our company)
-  companyName       String    @default("SkillVoucher Learning Pvt Ltd")
-  companyAddress    String    @default("123 Business Park, Tech Hub, Bangalore - 560001")
-  companyGSTIN      String    @default("29AAAAA0000A1Z5")
-  companyEmail      String    @default("billing@skillvoucher.com")
-  companyPhone      String    @default("+91 80 1234 5678")
+  companyName       String    @default("SkillUpdate Learning Pvt Ltd")
+  companyAddress    String    @default("Indiabulls Finance Centre, Tower 2, Senapati Bapat Marg, Lower Parel, Mumbai - 400013")
+  companyGSTIN      String    @default("")
+  companyEmail      String    @default("billing@skillupdate.com")
+  companyPhone      String    @default("+91 22 9115 7332")
   
   // Additional Info
   paymentMethod     String

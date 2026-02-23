@@ -145,7 +145,7 @@ export default function CheckoutPage() {
                     type="tel"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="+91 9876543210"
+                    placeholder="+91 22 9115 7332"
                     required
                   />
                 </div>

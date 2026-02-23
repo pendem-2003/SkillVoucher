@@ -6,11 +6,11 @@ import { useSession, signOut } from 'next-auth/react';
 import { useCart } from '@/lib/cart-store';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
-import { 
-  BookOpen, 
-  GraduationCap, 
-  LayoutDashboard, 
-  LogOut, 
+import {
+  BookOpen,
+  GraduationCap,
+  LayoutDashboard,
+  LogOut,
   Menu,
   ShoppingCart,
   User,
@@ -37,7 +37,7 @@ export default function Header() {
   useEffect(() => {
     setMounted(true);
     setCartCount(getItemCount());
-    
+
     // Fetch unread notifications count
     if (session?.user?.email) {
       fetch('/api/notifications/unread-count')
@@ -67,7 +67,7 @@ export default function Header() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [userMenuOpen]);
-  
+
   const navigation = [
     { name: 'Home', href: '/', icon: GraduationCap },
     { name: 'Courses', href: '/courses', icon: BookOpen },
@@ -89,7 +89,7 @@ export default function Header() {
               </div>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              SkillVoucher
+              SkillUpdate
             </span>
           </Link>
         </div>
@@ -118,11 +118,10 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`flex items-center gap-2 text-sm font-semibold transition-all px-4 py-2 rounded-lg ${
-                  isActive
+                className={`flex items-center gap-2 text-sm font-semibold transition-all px-4 py-2 rounded-lg ${isActive
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                     : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
-                }`}
+                  }`}
               >
                 <Icon className="h-4 w-4" />
                 {item.name}
@@ -162,18 +161,18 @@ export default function Header() {
               )}
             </Button>
           </Link>
-          
+
           {session ? (
             <div className="relative" ref={userMenuRef}>
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 size="icon"
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
                 className="hover:bg-blue-50"
               >
                 <User className="h-5 w-5" />
               </Button>
-              
+
               {userMenuOpen && (
                 <div className="absolute right-0 mt-2 w-56 rounded-2xl bg-white shadow-2xl border-2 border-gray-100 py-2 z-50">
                   <div className="px-4 py-3 border-b-2 border-gray-100">
@@ -247,11 +246,10 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`flex items-center gap-3 rounded-lg px-3 py-3 text-base font-semibold transition-all ${
-                    isActive
+                  className={`flex items-center gap-3 rounded-lg px-3 py-3 text-base font-semibold transition-all ${isActive
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                       : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
-                  }`}
+                    }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <Icon className="h-5 w-5" />

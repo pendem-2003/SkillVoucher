@@ -60,7 +60,7 @@ export default function EditCoursePage() {
   const router = useRouter();
   const params = useParams();
   const courseId = params?.id as string;
-  
+
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [formData, setFormData] = useState({
@@ -202,18 +202,18 @@ export default function EditCoursePage() {
       prev.map((module, i) =>
         i === moduleIndex
           ? {
-              ...module,
-              lessons: [
-                ...module.lessons,
-                {
-                  title: '',
-                  content: '',
-                  videoUrl: '',
-                  duration: 0,
-                  order: module.lessons.length + 1,
-                },
-              ],
-            }
+            ...module,
+            lessons: [
+              ...module.lessons,
+              {
+                title: '',
+                content: '',
+                videoUrl: '',
+                duration: 0,
+                order: module.lessons.length + 1,
+              },
+            ],
+          }
           : module
       )
     );
@@ -228,9 +228,9 @@ export default function EditCoursePage() {
       prev.map((module, i) =>
         i === moduleIndex
           ? {
-              ...module,
-              lessons: module.lessons.filter((_, li) => li !== lessonIndex),
-            }
+            ...module,
+            lessons: module.lessons.filter((_, li) => li !== lessonIndex),
+          }
           : module
       )
     );
@@ -241,11 +241,11 @@ export default function EditCoursePage() {
       prev.map((module, i) =>
         i === moduleIndex
           ? {
-              ...module,
-              lessons: module.lessons.map((lesson, li) =>
-                li === lessonIndex ? { ...lesson, [field]: value } : lesson
-              ),
-            }
+            ...module,
+            lessons: module.lessons.map((lesson, li) =>
+              li === lessonIndex ? { ...lesson, [field]: value } : lesson
+            ),
+          }
           : module
       )
     );
@@ -494,7 +494,7 @@ export default function EditCoursePage() {
               <div className="grid md:grid-cols-3 gap-4">
                 <div>
                   <Label htmlFor="category">Category</Label>
-                  <Select value={formData.category} onValueChange={(value) => setFormData(prev => ({...prev, category: value}))}>
+                  <Select value={formData.category} onValueChange={(value) => setFormData(prev => ({ ...prev, category: value }))}>
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
@@ -509,7 +509,7 @@ export default function EditCoursePage() {
                 </div>
                 <div>
                   <Label htmlFor="level">Level</Label>
-                  <Select value={formData.level} onValueChange={(value) => setFormData(prev => ({...prev, level: value}))}>
+                  <Select value={formData.level} onValueChange={(value) => setFormData(prev => ({ ...prev, level: value }))}>
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
@@ -522,7 +522,7 @@ export default function EditCoursePage() {
                 </div>
                 <div>
                   <Label htmlFor="language">Language</Label>
-                  <Select value={formData.language} onValueChange={(value) => setFormData(prev => ({...prev, language: value}))}>
+                  <Select value={formData.language} onValueChange={(value) => setFormData(prev => ({ ...prev, language: value }))}>
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>

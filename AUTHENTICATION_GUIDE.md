@@ -158,7 +158,7 @@ curl -X POST http://localhost:3000/api/auth/register \
     "name": "Test User",
     "email": "test@example.com",
     "password": "SecurePass123",
-    "phone": "1234567890",
+    "phone": "2291157332",
     "company": "Test Corp",
     "designation": "Developer"
   }'

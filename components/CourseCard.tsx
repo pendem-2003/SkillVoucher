@@ -153,9 +153,9 @@ export default function CourseCard({
           </Button>
         </Link>
         {!isEnrolled && (
-          <Button 
-            variant="outline" 
-            size="lg" 
+          <Button
+            variant="outline"
+            size="lg"
             className="w-full border-2"
             onClick={() => {
               addItem({ id, title, price, thumbnail, slug });

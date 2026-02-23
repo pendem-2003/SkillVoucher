@@ -14,7 +14,7 @@ async function testSignup() {
         name: 'Test User',
         email: 'test@example.com',
         password: hashedPassword,
-        phone: '1234567890',
+        phone: '2291157332',
         company: 'Test Company',
         designation: 'Developer',
         role: 'USER',

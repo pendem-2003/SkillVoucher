@@ -26,11 +26,11 @@ export const useCart = create<CartStore>()(
       addItem: (item) => {
         const items = get().items;
         const existingItem = items.find((i) => i.id === item.id);
-        
+
         if (existingItem) {
           return; // Item already in cart
         }
-        
+
         set({ items: [...items, item] });
       },
       removeItem: (id) => {

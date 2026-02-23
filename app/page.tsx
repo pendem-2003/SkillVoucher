@@ -2,11 +2,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import CourseCard from "@/components/CourseCard";
-import { 
-  Sparkles, 
-  TrendingUp, 
-  Award, 
-  Clock, 
+import {
+  Sparkles,
+  TrendingUp,
+  Award,
+  Clock,
   Download,
   CreditCard,
   GraduationCap,
@@ -68,8 +68,8 @@ export default function Home() {
     },
     {
       icon: Download,
-      title: "Reimbursement Invoices",
-      description: "Professional invoices ready for company submission",
+      title: "Instant Enrollment",
+      description: "Start learning immediately after payment",
       color: "from-purple-500 to-purple-600",
     },
     {
@@ -102,17 +102,16 @@ export default function Home() {
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm">
               <Sparkles className="h-4 w-4" />
-              Learn & Get Reimbursed
+              Learn & Grow
             </div>
             <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
               Level Up Your Skills with{" "}
               <span className="bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent">
-                Company Support
+                Personal Achievement
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-blue-100 sm:text-xl">
-              Premium courses designed for professionals. Get instant invoices for company reimbursement. 
-              3-month access to transform your career.
+              Premium courses designed for professionals. Unlock your potential with 3-month access to transformative learning.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/courses">
@@ -129,7 +128,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         {/* Decorative elements */}
         <div className="absolute top-1/4 left-10 h-72 w-72 rounded-full bg-purple-400 opacity-20 blur-3xl" />
         <div className="absolute bottom-1/4 right-10 h-72 w-72 rounded-full bg-pink-400 opacity-20 blur-3xl" />
@@ -162,14 +161,14 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
               Why Choose{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                SkillVoucher
+                SkillUpdate
               </span>
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Everything you need for professional learning and company reimbursement
+              Everything you need for professional learning and personal growth
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {features.map((feature) => {
               const Icon = feature.icon;
@@ -232,7 +231,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Simple steps to start learning and get reimbursed
+              Simple steps to start learning and track your progress
             </p>
           </div>
 
@@ -251,7 +250,7 @@ export default function Home() {
               {
                 step: "3",
                 title: "Download Invoice",
-                description: "Get professional invoice for company reimbursement. Learn for 3 months",
+                description: "Get a professional invoice as proof of your learning and purchase. Enjoy 3 months access",
               },
             ].map((item) => (
               <Card key={item.step} className="text-center border-2">
@@ -276,7 +275,7 @@ export default function Home() {
             Ready to Transform Your Career?
           </h2>
           <p className="mt-6 text-xl text-blue-100">
-            Join thousands of professionals upskilling with company support
+            Join thousands of professionals upskilling for personal and career growth
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/register">

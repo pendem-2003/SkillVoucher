@@ -21,7 +21,7 @@ REGISTER_RESPONSE=$(curl -s -X POST "${BASE_URL}/api/auth/register" \
     \"name\": \"${TEST_NAME}\",
     \"email\": \"${TEST_EMAIL}\",
     \"password\": \"${TEST_PASSWORD}\",
-    \"phone\": \"1234567890\",
+    \"phone\": \"2291157332\",
     \"company\": \"Test Corp\",
     \"designation\": \"Developer\"
   }")

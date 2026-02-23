@@ -88,7 +88,7 @@ export default function BillsPage() {
             My Bills & Invoices
           </h1>
           <p className="text-gray-600 mt-2">
-            Download your invoices for reimbursement claims
+            Download your invoices as proof of purchase and learning. You can use these for company reimbursement if required.
           </p>
         </div>
 
@@ -144,7 +144,7 @@ export default function BillsPage() {
                               </div>
                             )}
                           </div>
-                          
+
                           {/* Course Details */}
                           <div className="mt-3">
                             <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">
@@ -172,11 +172,10 @@ export default function BillsPage() {
                         <p className="text-xs text-gray-500 mt-1">
                           (including ₹{invoice.taxAmount.toLocaleString('en-IN')} GST)
                         </p>
-                        <span className={`inline-block mt-2 px-3 py-1 rounded-full text-xs font-semibold ${
-                          (invoice.payment?.status || 'COMPLETED') === 'COMPLETED'
+                        <span className={`inline-block mt-2 px-3 py-1 rounded-full text-xs font-semibold ${(invoice.payment?.status || 'COMPLETED') === 'COMPLETED'
                             ? 'bg-green-100 text-green-800'
                             : 'bg-yellow-100 text-yellow-800'
-                        }`}>
+                          }`}>
                           {invoice.payment?.status || 'COMPLETED'}
                         </span>
                       </div>
@@ -211,13 +210,13 @@ export default function BillsPage() {
         <Card className="mt-8 bg-blue-50 border-blue-200">
           <CardContent className="p-6">
             <h3 className="font-semibold text-blue-900 mb-2">
-              📝 Using Invoices for Reimbursement
+              📝 Download Your Learning Invoice
             </h3>
             <ul className="text-sm text-blue-800 space-y-1">
-              <li>• All invoices include GST details and company information</li>
-              <li>• Invoices are compliant with corporate reimbursement policies</li>
-              <li>• Download PDF format for easy submission to HR/Finance</li>
-              <li>• Each invoice has a unique number for tracking</li>
+              <li>Download your invoice for any course or book purchase.</li>
+              <li>Invoices are for your personal records and learning progress.</li>
+              <li>Use invoices to track your growth and achievements.</li>
+              <li>Contact support for any questions or custom requests.</li>
             </ul>
           </CardContent>
         </Card>

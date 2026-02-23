@@ -18,7 +18,7 @@
 2. Fill in all details:
    - Full Name: John Doe
    - Email: john@company.com
-   - Phone: +91 98765 43210
+   - Phone: +91 22 9115 7332
    - Company: Tech Corp India
    - Designation: Software Engineer
    - Password: password123

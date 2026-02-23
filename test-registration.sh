@@ -15,7 +15,7 @@ RESPONSE=$(curl -s -X POST http://localhost:3000/api/auth/register \
     "name": "John Doe",
     "email": "john.doe@example.com",
     "password": "SecurePass123",
-    "phone": "1234567890",
+    "phone": "2291157332",
     "company": "Tech Corp",
     "designation": "Software Engineer"
   }')

@@ -9,7 +9,7 @@ users.set('demo@example.com', {
   name: 'Demo User',
   email: 'demo@example.com',
   password: '$2a$10$YourHashedPasswordHere', // bcrypt hash of "demo123"
-  phone: '+1234567890',
+  phone: '+2291157332',
   company: 'Demo Company',
   designation: 'Developer',
   role: 'USER',

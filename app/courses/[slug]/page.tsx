@@ -121,7 +121,7 @@ export default function CourseDetailPage() {
     '50+ hours of video content',
     'Real-world projects',
     'Certificate of completion',
-    'Reimbursement invoice included',
+    'Invoice for proof of purchase (company reimbursement supported)',
     'Lifetime community access',
     '24/7 support',
   ];
@@ -171,11 +171,11 @@ export default function CourseDetailPage() {
                   {course.level || 'Beginner'}
                 </Badge>
               </div>
-              
+
               <h1 className="text-5xl font-extrabold mb-4 drop-shadow-2xl">
                 {course.title}
               </h1>
-              
+
               <p className="text-xl text-white/90 mb-6 font-medium">
                 {course.shortDesc || course.description}
               </p>
@@ -261,11 +261,10 @@ export default function CourseDetailPage() {
                       <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}
-                        className={`px-6 py-3 font-bold text-lg rounded-xl transition-all ${
-                          activeTab === tab
+                        className={`px-6 py-3 font-bold text-lg rounded-xl transition-all ${activeTab === tab
                             ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-xl'
                             : 'text-gray-600 hover:bg-blue-50'
-                        }`}
+                          }`}
                       >
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
                       </button>

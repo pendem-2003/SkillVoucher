@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              SkillVoucher
+              SkillUpdate
             </h3>
             <p className="text-sm text-gray-300">
               Professional learning platform for career growth with company reimbursement support.
@@ -94,7 +94,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Mail className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-300">support@skillvoucher.com</span>
+                <span className="text-gray-300">support@skillupdate.com</span>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
@@ -112,7 +112,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-300">
-              © {currentYear} SkillVoucher. All rights reserved.
+              © {currentYear} SkillUpdate. All rights reserved.
             </p>
             <p className="text-sm text-gray-300">
               Made with <span className="text-red-400">❤️</span> for professionals

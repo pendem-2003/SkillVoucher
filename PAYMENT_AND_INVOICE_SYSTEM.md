@@ -33,11 +33,11 @@ model Invoice {
   courseDetails     Json      // Detailed course info
   
   // Company Details (our company)
-  companyName       String    @default("SkillVoucher Learning Pvt Ltd")
+  companyName       String    @default("SkillUpdate Learning Pvt Ltd")
   companyAddress    String    @default("123 Business Park, Tech Hub, Bangalore - 560001")
   companyGSTIN      String    @default("29AAAAA0000A1Z5")
-  companyEmail      String    @default("billing@skillvoucher.com")
-  companyPhone      String    @default("+91 80 1234 5678")
+  companyEmail      String    @default("billing@skillupdate.com")
+  companyPhone      String    @default("+91 22 9115 7332")
   
   // Additional Info
   paymentMethod     String
@@ -137,11 +137,11 @@ await tx.invoice.create({
 
 #### 1. Company Header (Vendor Details)
 ```
-SkillVoucher Learning Pvt Ltd
+SkillUpdate Learning Pvt Ltd
 123 Business Park, Tech Hub, Bangalore - 560001
 GSTIN: 29AAAAA0000A1Z5
-Email: billing@skillvoucher.com
-Phone: +91 80 1234 5678
+Email: billing@skillupdate.com
+Phone: +91 22 9115 7332
 ```
 
 #### 2. Customer Details (Bill To)
@@ -154,10 +154,10 @@ Phone: [Customer Phone]
 ```
 
 #### 3. Invoice Metadata
-- Invoice Number: `INV-1234567890-ABC12`
+- Invoice Number: `INV-2291157332-ABC12`
 - Invoice Date: `21 February 2026`
 - Payment Method: `CARD`
-- Transaction ID: `TXN_1234567890`
+- Transaction ID: `TXN_2291157332`
 - Status: `COMPLETED`
 
 #### 4. Course Details Table
@@ -184,7 +184,7 @@ Purchase of 2 course(s) - Valid for 90 days
 #### 7. Footer
 ```
 This is a computer-generated invoice and does not require a signature.
-For any queries, please contact us at billing@skillvoucher.com
+For any queries, please contact us at billing@skillupdate.com
 ```
 
 ---
@@ -423,8 +423,8 @@ Example: INV-1708550400000-A1B2C
 
 ### Contact Information:
 - Email: `support@skillvoucher.com`
-- Billing: `billing@skillvoucher.com`
-- Phone: `+91 80 1234 5678`
+- Billing: `billing@skillupdate.com`
+- Phone: `+91 22 9115 7332`
 
 ---
 

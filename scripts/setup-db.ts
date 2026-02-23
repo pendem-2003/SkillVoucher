@@ -1,18 +1,18 @@
 import { Pool } from 'pg';
 
 const connectionString =
-  'postgresql://postgres:postgres@localhost:51214/template1?sslmode=disable';
+    'postgresql://postgres:postgres@localhost:51214/template1?sslmode=disable';
 
 const pool = new Pool({ connectionString });
 
 async function createTables() {
-  const client = await pool.connect();
-  
-  try {
-    console.log('\n🔨 Creating database tables...\n');
+    const client = await pool.connect();
 
-    // Create User table
-    await client.query(`
+    try {
+        console.log('\n🔨 Creating database tables...\n');
+
+        // Create User table
+        await client.query(`
       CREATE TABLE IF NOT EXISTS "User" (
         "id" TEXT PRIMARY KEY,
         "name" TEXT NOT NULL,
@@ -26,10 +26,10 @@ async function createTables() {
         "updatedAt" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
       );
     `);
-    console.log('✅ User table created');
+        console.log('✅ User table created');
 
-    // Create Course table
-    await client.query(`
+        // Create Course table
+        await client.query(`
       CREATE TABLE IF NOT EXISTS "Course" (
         "id" TEXT PRIMARY KEY,
         "title" TEXT NOT NULL,
@@ -49,10 +49,10 @@ async function createTables() {
         "updatedAt" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
       );
     `);
-    console.log('✅ Course table created');
+        console.log('✅ Course table created');
 
-    // Create Enrollment table
-    await client.query(`
+        // Create Enrollment table
+        await client.query(`
       CREATE TABLE IF NOT EXISTS "Enrollment" (
         "id" TEXT PRIMARY KEY,
         "userId" TEXT NOT NULL,
@@ -65,10 +65,10 @@ async function createTables() {
         FOREIGN KEY ("courseId") REFERENCES "Course"("id") ON DELETE CASCADE
       );
     `);
-    console.log('✅ Enrollment table created');
+        console.log('✅ Enrollment table created');
 
-    // Create CourseRequest table
-    await client.query(`
+        // Create CourseRequest table
+        await client.query(`
       CREATE TABLE IF NOT EXISTS "CourseRequest" (
         "id" TEXT PRIMARY KEY,
         "userId" TEXT NOT NULL,
@@ -80,10 +80,10 @@ async function createTables() {
         FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE
       );
     `);
-    console.log('✅ CourseRequest table created');
+        console.log('✅ CourseRequest table created');
 
-    // Create Transaction table
-    await client.query(`
+        // Create Transaction table
+        await client.query(`
       CREATE TABLE IF NOT EXISTS "Transaction" (
         "id" TEXT PRIMARY KEY,
         "userId" TEXT NOT NULL,
@@ -98,35 +98,35 @@ async function createTables() {
         FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE
       );
     `);
-    console.log('✅ Transaction table created');
+        console.log('✅ Transaction table created');
 
-    // Create indexes
-    await client.query(`CREATE INDEX IF NOT EXISTS "Enrollment_userId_idx" ON "Enrollment"("userId");`);
-    await client.query(`CREATE INDEX IF NOT EXISTS "Enrollment_courseId_idx" ON "Enrollment"("courseId");`);
-    await client.query(`CREATE INDEX IF NOT EXISTS "CourseRequest_userId_idx" ON "CourseRequest"("userId");`);
-    await client.query(`CREATE INDEX IF NOT EXISTS "Transaction_userId_idx" ON "Transaction"("userId");`);
-    console.log('✅ Indexes created');
+        // Create indexes
+        await client.query(`CREATE INDEX IF NOT EXISTS "Enrollment_userId_idx" ON "Enrollment"("userId");`);
+        await client.query(`CREATE INDEX IF NOT EXISTS "Enrollment_courseId_idx" ON "Enrollment"("courseId");`);
+        await client.query(`CREATE INDEX IF NOT EXISTS "CourseRequest_userId_idx" ON "CourseRequest"("userId");`);
+        await client.query(`CREATE INDEX IF NOT EXISTS "Transaction_userId_idx" ON "Transaction"("userId");`);
+        console.log('✅ Indexes created');
 
-    // List all tables
-    const result = await client.query(`
+        // List all tables
+        const result = await client.query(`
       SELECT table_name 
       FROM information_schema.tables 
       WHERE table_schema = 'public' 
       ORDER BY table_name;
     `);
 
-    console.log('\n📊 Database Tables:');
-    result.rows.forEach((row: any) => {
-      console.log(`  - ${row.table_name}`);
-    });
+        console.log('\n📊 Database Tables:');
+        result.rows.forEach((row: any) => {
+            console.log(`  - ${row.table_name}`);
+        });
 
-    console.log('\n✅ All tables created successfully!\n');
-  } catch (error) {
-    console.error('❌ Error:', error);
-  } finally {
-    client.release();
-    await pool.end();
-  }
+        console.log('\n✅ All tables created successfully!\n');
+    } catch (error) {
+        console.error('❌ Error:', error);
+    } finally {
+        client.release();
+        await pool.end();
+    }
 }
 
 createTables();

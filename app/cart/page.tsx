@@ -169,8 +169,8 @@ export default function CartPage() {
                 </div>
 
                 {/* Checkout Button */}
-                <Button 
-                  className="w-full shadow-2xl text-lg" 
+                <Button
+                  className="w-full shadow-2xl text-lg"
                   size="lg"
                   onClick={handleCheckout}
                 >
@@ -191,7 +191,7 @@ export default function CartPage() {
                 {/* Info */}
                 <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-4">
                   <p className="text-sm text-gray-700 leading-relaxed">
-                    <strong>Note:</strong> All courses include 3 months access and downloadable reimbursement invoices.
+                    <strong>Note:</strong> All courses include 3 months access and downloadable invoices for proof of purchase and learning. You can use these invoices for company reimbursement if required.
                   </p>
                 </div>
               </CardContent>
