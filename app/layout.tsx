@@ -9,7 +9,7 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SkillUpdate - Learn & Get Reimbursed",
+  title: "SkillUpdate - Master it",
   description: "Professional learning platform for career growth with company reimbursement support. Access premium courses with 3-month duration and downloadable invoices.",
   keywords: "online courses, professional training, company reimbursement, skill development",
 };
